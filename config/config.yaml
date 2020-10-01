@@ -11,6 +11,6 @@ cf_key: ""
 # source definition file
 source-files:
   # use local file
-  - source.yaml
+  - ./config/source.yaml
   # use web file
-  - https://proxypoolss.herokuapp.com/source.yaml
+#  - https://proxypoolss.herokuapp.com/config/source.yaml

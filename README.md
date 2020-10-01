@@ -1,3 +1,5 @@
+> 存档自用
+
 <h1 align="center">
   <br>proxypool<br>
 </h1>
@@ -28,11 +30,16 @@
 
 ## 安装
 
+以下四选一。
+
 ### 使用Heroku
 
 点击按钮进入部署页面，填写基本信息然后运行
 
-其中 `DOMAIN` 需要填写为你需要绑定的域名，`CONFIG_FILE` 需要填写你的配置文件路径，配置文件模板见 config/config.yaml 文件
+其中 `DOMAIN` 需要填写为你需要绑定的域名，`CONFIG_FILE` 需要填写你的配置文件路径
+> 若使用项目内文件填`./config/config.yaml`
+
+配置文件模板见 config/config.yaml 文件
 
 `CF` 开头的选项暂不需要填写，不影响程序运行
 
@@ -44,14 +51,28 @@
 ### 从源码编译
 
 需要安装Golang
+> Golang需要使用国内镜像，因原站的某些package已迁移。  
+> 由于某些众所周知的原因，需要开启科学上网代理
 
 ```sh
 $ go get -u -v github.com/Sansui233/proxypool
 ```
 
+运行
+```shell script
+$ go run main.go -c ./config/config.yaml
+```
+
+编译
+```
+make
+```
+
 ### 下载预编译程序
 
-从这里下载预编译好的程序 [release](https://github.com/Sansui233/proxypool/releases)
+从这里下载预编译好的程序 [release](https://github.com/zu1k/proxypool/releases)
+
+> 原作者已停更，需要请自行编译
 
 ### 使用docker
 
@@ -72,7 +93,7 @@ source.yaml 文件中定义了抓取源，需要定期手动维护更新
 使用 `-c` 参数指定配置文件路径，支持http链接
 
 ```shell
-proxypool -c config.yaml
+proxypool -c ./config/config.yaml
 ```
 
 ## 截图
