@@ -3,7 +3,7 @@ package proxy
 import (
 	"errors"
 
-	"github.com/zu1k/proxypool/pkg/tool"
+	"github.com/Sansui233/proxypool/pkg/tool"
 )
 
 func SS2SSR(ss *Shadowsocks) (ssr *ShadowsocksR, err error) {
@@ -21,7 +21,7 @@ func SS2SSR(ss *Shadowsocks) (ssr *ShadowsocksR, err error) {
 		Cipher:   ss.Cipher,
 		Protocol: "origin",
 		Obfs:     "plain",
-		Group:    "proxy.tgbot.co",
+		Group:    "proxypoolss.herokuapp.com",
 	}, nil
 }
 

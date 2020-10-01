@@ -4,7 +4,7 @@
   "website": "https://proxypoolss.herokuapp.com/",
   "repository": "https://github.com/Sansui233/proxypool",
   "success_url": "/",
-  "logo": "https://raw.githubusercontent.com/zu1k/proxypool/heroku/assets/proxy.jpg",
+  "logo": "https://raw.githubusercontent.com/Sansui233/proxypool/heroku/assets/proxy.jpg",
   "keywords": ["golang", "ss", "ssr", "vmess", "shadowsocks", "shadowsocksr", "trojan"],
   "env": {
     "CONFIG_FILE": {
