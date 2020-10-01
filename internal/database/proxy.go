@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/zu1k/proxypool/pkg/getter"
-	"github.com/zu1k/proxypool/pkg/proxy"
+	"github.com/Sansui233/proxypool/pkg/getter"
+	"github.com/Sansui233/proxypool/pkg/proxy"
 	"gorm.io/gorm"
 )
 
