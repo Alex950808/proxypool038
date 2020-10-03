@@ -10,14 +10,17 @@ import (
 	"github.com/Sansui233/proxypool/pkg/tool"
 )
 
+// Add key value pair to creatorMap(string → creator) in base.go
 func init() {
 	Register("subscribe", NewSubscribe)
 }
 
+/* A Getter with an additional property */
 type Subscribe struct {
 	Url string
 }
 
+// Implement Getter interface
 func (s *Subscribe) Get() proxy.ProxyList {
 	resp, err := tool.GetHttpClient().Get(s.Url)
 	if err != nil {

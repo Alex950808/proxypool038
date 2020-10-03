@@ -9,14 +9,18 @@ import (
 	"github.com/Sansui233/proxypool/pkg/tool"
 )
 
+// Add key value pair to creatorMap(string → creator) in base.go
 func init() {
+	// register to creator map
 	Register("webfuzz", NewWebFuzzGetter)
 }
 
+/* A Getter with an additional property */
 type WebFuzz struct {
 	Url string
 }
 
+// Implement Getter interface
 func (w *WebFuzz) Get() proxy.ProxyList {
 	resp, err := tool.GetHttpClient().Get(w.Url)
 	if err != nil {

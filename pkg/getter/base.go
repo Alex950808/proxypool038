@@ -9,13 +9,17 @@ import (
 	"github.com/Sansui233/proxypool/pkg/tool"
 )
 
+// functions for getters
 type Getter interface {
 	Get() proxy.ProxyList
 	Get2Chan(pc chan proxy.Proxy, wg *sync.WaitGroup)
 }
 
+// function type that creates getters
 type creator func(options tool.Options) (getter Getter, err error)
 
+// map str sourceType -> func creating getters,
+// registered in package init()
 var creatorMap = make(map[string]creator)
 
 func Register(sourceType string, c creator) {
