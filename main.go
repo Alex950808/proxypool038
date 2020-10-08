@@ -36,9 +36,11 @@ func main() {
 	}
 
 	database.InitTables()
+	// init GeoIp db reader and map between emoji's and countries
+	// return: struct geoIp (dbreader, emojimap)
 	proxy.InitGeoIpDB()
 	fmt.Println("Do the first crawl...")
-	go app.CrawlGo()
-	go cron.Cron()
-	api.Run()
+	go app.CrawlGo() // 抓取主程序
+	go cron.Cron()   // 定时运行
+	api.Run()        // Web Serve
 }

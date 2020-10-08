@@ -9,6 +9,7 @@ import (
 
 type ProxyList []Proxy
 
+// sort排序使用
 func (ps ProxyList) Len() int {
 	return len(ps)
 }
@@ -32,6 +33,7 @@ func init() {
 	sortType["trojan"] = 4
 }
 
+// sort排序使用
 func (ps ProxyList) Less(i, j int) bool {
 	if ps[i].BaseInfo().Name == ps[j].BaseInfo().Name {
 		return sortType[ps[i].BaseInfo().Type] < sortType[ps[j].BaseInfo().Type]
@@ -40,10 +42,12 @@ func (ps ProxyList) Less(i, j int) bool {
 	}
 }
 
+// sort排序使用
 func (ps ProxyList) Swap(i, j int) {
 	ps[i], ps[j] = ps[j], ps[i]
 }
 
+// 去除重复的节点
 func (ps ProxyList) Deduplication() ProxyList {
 	result := make(ProxyList, 0, len(ps))
 	temp := map[string]struct{}{}
@@ -102,6 +106,7 @@ func (ps ProxyList) NameReIndex() ProxyList {
 	return ps
 }
 
+// ？
 func (ps ProxyList) NameAddTG() ProxyList {
 	num := len(ps)
 	for i := 0; i < num; i++ {

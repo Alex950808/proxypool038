@@ -35,6 +35,7 @@ func (c Clash) Provide() string {
 	return resultBuilder.String()
 }
 
+// 检查单个节点的加密方式、协议类型与混淆是否是Clash(windows)所支持的
 func checkClashSupport(p proxy.Proxy) bool {
 	switch p.TypeName() {
 	case "ssr":
