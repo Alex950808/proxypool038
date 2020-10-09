@@ -1,4 +1,4 @@
-# Note
+# Note 
 
 ## 处理订阅源：getter类
 有关订阅源的package位于pkg/getter。
@@ -7,7 +7,7 @@
 - Get() 返回一个ProxyList
 - Get2chan() 还没研究
 
-多态：已实现的Getter（以sourceType命名）
+已实现的Getter（以sourceType命名）
 - subscribe（该实现比接口Getter多了个url）
 - tgchannel
 - web_fanqiangdang
@@ -26,8 +26,6 @@
 
 Proxylist是proxy数组加上一系列批量处理proxy的方法。
 
-
-
 ## 抓取
 task.go的Crawl.go实现抓取。
 
@@ -39,9 +37,42 @@ task.go的Crawl.go实现抓取。
 5. 存储可用的节点到cache
 
 ## 存储
-所有节点存储到cache中，key为all_proxies。问题是对于失效的节点也存储，运行时间久了无用的cache会非常多。可以考虑删除对失效节点的存放。
+所有节点存储到cache中。
 
-如果配置文件填写了database url会存储到database中。
+cache中的key设计有：
+- allproxies: 所有节点（包括不可用节点）
+- proxies: 可用节点
+- clashproxies: clash支持的节点。第一次运行时是把proxies复制过来的。
+
+问题是对于失效的节点也存储，运行时间久了无用的cache会非常多。可以考虑删除对失效节点的存放。
+
+如果配置文件填写了database url会存储到database中。Database连接参数自行修改源码。  
+目前database数据只在抓取时使用，不用于处理Web请求。
+
+```
+	dsn := "user=proxypool password=proxypool dbname=proxypool port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+```
 
 ## Web界面
-还没看
+
+静态的assets文件模板由zip压缩后存为字符串的形式，如
+
+```
+var _assetsHtmlSurgeHtml="[]byte("\x1f\x8b\x...")"
+```
+
+
+
+以上字节解压后是一个go的HTML模板。解压时，由gzip的reader写入byte.Buffer，再转换为Bytes写入相应文件。
+
+因此想修改html文件请写好后自行压缩并替换字节。
+
+不知道原作者为何一定要把模板设计为html generator，毕竟感觉直接使用html file也没什么问题。我猜可能是为了增加不可读性吧，免得有人用了这个项目不标明出处。那其实也不必这样做，直接在最后注入原项目地址就成了。
+
+## 本地测试
+需要注意：
+- 修改了config的domain
+- 修改了source，注释掉较慢的源
+
+增加了对config-local文件的解析。
+bindata中增加了clash-config-local.yaml字段，也增加了模板。

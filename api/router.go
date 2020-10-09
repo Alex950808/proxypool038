@@ -2,16 +2,17 @@ package api
 
 import (
 	"html/template"
+	"log"
 	"net/http"
 	"os"
 	"strconv"
 
-	"github.com/gin-gonic/gin"
-	_ "github.com/heroku/x/hmetrics/onload"
 	"github.com/Sansui233/proxypool/config"
 	binhtml "github.com/Sansui233/proxypool/internal/bindata/html"
 	"github.com/Sansui233/proxypool/internal/cache"
 	"github.com/Sansui233/proxypool/pkg/provider"
+	"github.com/gin-gonic/gin"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 const version = "v0.3.8"
@@ -20,13 +21,13 @@ var router *gin.Engine
 
 func setupRouter() {
 	gin.SetMode(gin.ReleaseMode)
-	router = gin.New()
-	router.Use(gin.Recovery())
-	temp, err := loadTemplate()
+	router = gin.New()          // 没有任何中间件的路由
+	router.Use(gin.Recovery())  // 加上处理panic的中间件，防止遇到panic退出程序
+	temp, err := loadTemplate() // 加载模板，模板源存放于html.go中的类似_assetsHtmlSurgeHtml的变量
 	if err != nil {
 		panic(err)
 	}
-	router.SetHTMLTemplate(temp)
+	router.SetHTMLTemplate(temp) // 应用模板
 
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "assets/html/index.html", gin.H{
@@ -60,6 +61,12 @@ func setupRouter() {
 			"domain": config.Config.Domain,
 		})
 	})
+	// 本地config路径
+	router.GET("/clash/localconfig", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "clash-config-local.yaml", gin.H{
+			"domain": config.Config.Domain,
+		})
+	})
 
 	router.GET("/surge/config", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "assets/html/surge.conf", gin.H{
@@ -81,7 +88,7 @@ func setupRouter() {
 						Proxies: &proxies,
 					},
 				}
-				text = clash.Provide()
+				text = clash.Provide() // 根据Query筛选节点
 				cache.SetString("clashproxies", text)
 			}
 		} else if proxyTypes == "all" {
@@ -94,7 +101,7 @@ func setupRouter() {
 					NotCountry: proxyNotCountry,
 				},
 			}
-			text = clash.Provide()
+			text = clash.Provide() // 根据Query筛选节点
 		} else {
 			proxies := cache.GetProxies("proxies")
 			clash := provider.Clash{
@@ -105,7 +112,7 @@ func setupRouter() {
 					NotCountry: proxyNotCountry,
 				},
 			}
-			text = clash.Provide()
+			text = clash.Provide() // 根据Query筛选节点
 		}
 		c.String(200, text)
 	})
@@ -202,18 +209,39 @@ func Run() {
 	if port == "" {
 		port = "8080"
 	}
-	router.Run(":" + port)
+	// 本地运行或远程部署
+	if config.Config.Domain != "127.0.0.1:8080" {
+		err := router.Run(":" + port)
+		if err != nil {
+			log.Fatal("[router.go] Remote server starting failed")
+		}
+	} else {
+		err := router.Run()
+		if err != nil {
+			log.Fatal("[router.go] Local server starting failed")
+		}
+	}
+
 }
 
+// 创建HTML模板，返回templates
 func loadTemplate() (t *template.Template, err error) {
-	_ = binhtml.RestoreAssets("", "assets/html")
+	_ = binhtml.RestoreAssets("", "assets/html") // 创建/重新创建站点文件夹下的assets
 	t = template.New("")
 	for _, fileName := range binhtml.AssetNames() {
-		data := binhtml.MustAsset(fileName)
+		data := binhtml.MustAsset(fileName) // 解压被压缩后html文档数据成template
 		t, err = t.New(fileName).Parse(string(data))
 		if err != nil {
 			return nil, err
 		}
 	}
+	// 使用本地模板文件
+	cwd, _ := os.Getwd()
+	fileName := cwd + "/assets/html/clash-config-local.yaml"
+	t, err = t.ParseFiles(fileName) // Parsefile的生成的name，无路径前缀
+	if err != nil {
+		log.Panic("[router.go] clash local config doesn't exsit")
+	}
+
 	return t, nil
 }
