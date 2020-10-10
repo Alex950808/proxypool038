@@ -238,7 +238,7 @@ func loadTemplate() (t *template.Template, err error) {
 	// 使用本地模板文件
 	cwd, _ := os.Getwd()
 	fileName := cwd + "/assets/html/clash-config-local.yaml"
-	t, err = t.ParseFiles(fileName) // Parsefile的生成的name，无路径前缀
+	t, err = t.ParseFiles(fileName) // Parsefile生成的name无路径前缀
 	if err != nil {
 		log.Panic("[router.go] clash local config doesn't exsit")
 	}

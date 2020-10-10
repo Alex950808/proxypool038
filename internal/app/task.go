@@ -73,7 +73,6 @@ func CrawlGo() {
 	cache.SetProxies("proxies", proxies) //存放可用的节点到程序的缓存中
 	cache.UsefullProxiesCount = proxies.Len()
 
-	// TODO: 目前其实并未对不同客户端的支持作区分
 	cache.SetString("clashproxies", provider.Clash{
 		provider.Base{
 			Proxies: &proxies,

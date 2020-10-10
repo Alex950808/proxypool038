@@ -1,5 +1,3 @@
-> 存档自用
-
 <h1 align="center">
   <br>proxypool<br>
 </h1>

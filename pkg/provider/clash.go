@@ -22,6 +22,7 @@ func (c Clash) CleanProxies() (proxies proxy.ProxyList) {
 	return
 }
 
+// 生成Clash的Provider配置文件
 func (c Clash) Provide() string {
 	c.preFilter()
 
@@ -32,10 +33,13 @@ func (c Clash) Provide() string {
 			resultBuilder.WriteString(p.ToClash() + "\n")
 		}
 	}
+	if resultBuilder.Len() == 9 { //如果没有proxy，添加无效有NULL节点，防止Clash对空节点的Provider报错
+		resultBuilder.WriteString("- {\"name\":\"NULL\",\"server\":\"NULL\",\"port\":11708,\"type\":\"ssr\",\"country\":\"NULL\",\"password\":\"sEscPBiAD9K$\\u0026@79\",\"cipher\":\"aes-256-cfb\",\"protocol\":\"origin\",\"protocol_param\":\"NULL\",\"obfs\":\"http_simple\"}")
+	}
 	return resultBuilder.String()
 }
 
-// 检查单个节点的加密方式、协议类型与混淆是否是Clash(windows)所支持的
+// 检查单个节点的加密方式、协议类型与混淆是否是Clash所支持的
 func checkClashSupport(p proxy.Proxy) bool {
 	switch p.TypeName() {
 	case "ssr":

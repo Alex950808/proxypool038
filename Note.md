@@ -24,6 +24,20 @@
 ## proxy类
 节点的接口为interface proxy，由struct Base实现其基类，Vmess等实现多态。
 
+所有字段名依据clash的配置文件标准设计。比如
+```
+type ShadowsocksR struct {
+	Base          // 节点基本信息
+	Password      string `yaml:"password" json:"password"`
+	Cipher        string `yaml:"cipher" json:"cipher"`
+	Protocol      string `yaml:"protocol" json:"protocol"`
+	ProtocolParam string `yaml:"protocol-param,omitempty" json:"protocol_param,omitempty"`
+	Obfs          string `yaml:"obfs" json:"obfs"`
+	ObfsParam     string `yaml:"obfs-param,omitempty" json:"obfs_param,omitempty"`
+	Group         string `yaml:"group,omitempty" json:"group,omitempty"`
+}
+```
+
 Proxylist是proxy数组加上一系列批量处理proxy的方法。
 
 ## 抓取

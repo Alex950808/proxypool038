@@ -1,9 +1,15 @@
-Clash配置文件只支持1.3以上客户端。
+Clash客户端支持：
+- Clash for Windows（需要Clash Core1.3以上）
+- ClashX（需要Clash Core1.3以上）
+- 不支持ClashXR与ClashR等非原生Clash Core客户端。
 
-基于以下原因，现在尚且不能使用。  
-To Solve:
--[ ] ssr输出时需要全部转换为ss类型
--[ ] 遇到无节点的provider，Clash会报错  
+TODO:
+ 
+-[ ] 遇到无节点的provider，Clash会报错。
+    还是减少一下不常用的国家吧。可以用动态生成config解决，~~但懒得写~~。
+    提供了clash-config-local模板，可以自行替换域名。
+    之后考虑添加缺省字段DIRECT解决这个问题。
+    
 
 ## New
 

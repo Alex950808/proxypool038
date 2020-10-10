@@ -31,6 +31,7 @@ func TestSSRLink(t *testing.T) {
 		t.Error(err)
 	}
 	fmt.Println(ssr)
+	fmt.Println(ssr.ToClash())
 }
 
 func TestTrojanLink(t *testing.T) {

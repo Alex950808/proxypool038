@@ -23,6 +23,7 @@ var (
 	ErrorObfsParamParseFail     = errors.New("obfs param parse failed")
 )
 
+// 字段依据clash的配置设计
 type ShadowsocksR struct {
 	Base
 	Password      string `yaml:"password" json:"password"`
