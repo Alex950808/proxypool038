@@ -1,7 +1,7 @@
 package database
 
 import (
-	"fmt"
+	"log"
 	"os"
 
 	"github.com/Sansui233/proxypool/config"
@@ -14,6 +14,7 @@ import (
 var DB *gorm.DB
 
 func connect() (err error) {
+	// localhost url
 	dsn := "user=proxypool password=proxypool dbname=proxypool port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 	if url := config.Config.DatabaseUrl; url != "" {
 		dsn = url
@@ -21,11 +22,14 @@ func connect() (err error) {
 	if url := os.Getenv("DATABASE_URL"); url != "" {
 		dsn = url
 	}
+	// 该写法只支持本地连接，远程连接需要postgres.Config()，添加DriverName
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{
 		Logger: logger.Default.LogMode(logger.Silent),
 	})
 	if err == nil {
-		fmt.Println("DB connect success: ", DB.Name())
+		log.Println("[db.go] DB connect success: ", DB.Name())
+	}else{
+		log.Println("[db.go] DB connect failed OR no DB: ", DB.Name())
 	}
 	return
 }

@@ -149,124 +149,124 @@ proxy-groups:
 proxy-providers:
   au:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=AU"
+    url: "http://127.0.0.1:8080/clash/proxies?c=AU"
     interval: 3600
-    path: ./provider-au.yaml
+    path: ./providers/provider-au.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   cn:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=CN,HK,TW"
+    url: "http://127.0.0.1:8080/clash/proxies?c=CN,HK,TW"
     interval: 3600
-    path: ./provider-cn.yaml
+    path: ./providers/provider-cn.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   us:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=US"
+    url: "http://127.0.0.1:8080/clash/proxies?c=US"
     interval: 3600
-    path: ./provider-us.yaml
+    path: ./providers/provider-us.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   ca:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=CA"
+    url: "http://127.0.0.1:8080/clash/proxies?c=CA"
     interval: 3600
-    path: ./provider-ca.yaml
+    path: ./providers/provider-ca.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   jp:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=JP"
+    url: "http://127.0.0.1:8080/clash/proxies?c=JP"
     interval: 3600
-    path: ./provider-jp.yaml
+    path: ./providers/provider-jp.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   sg:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=SG"
+    url: "http://127.0.0.1:8080/clash/proxies?c=SG"
     interval: 3600
-    path: ./provider-sg.yaml
+    path: ./providers/provider-sg.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   ru:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=RU"
+    url: "http://127.0.0.1:8080/clash/proxies?c=RU"
     interval: 3600
-    path: ./provider-ru.yaml
+    path: ./providers/provider-ru.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   ch:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=CH"
+    url: "http://127.0.0.1:8080/clash/proxies?c=CH"
     interval: 3600
-    path: ./provider-ch.yaml
+    path: ./providers/provider-ch.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   de:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=DE"
+    url: "http://127.0.0.1:8080/clash/proxies?c=DE"
     interval: 3600
-    path: ./provider-de.yaml
+    path: ./providers/provider-de.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   fr:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=FR"
+    url: "http://127.0.0.1:8080/clash/proxies?c=FR"
     interval: 3600
-    path: ./provider-fr.yaml
+    path: ./providers/provider-fr.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   gb:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=GB"
+    url: "http://127.0.0.1:8080/clash/proxies?c=GB"
     interval: 3600
-    path: ./provider-gb.yaml
+    path: ./providers/provider-gb.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   nl:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?c=NL"
+    url: "http://127.0.0.1:8080/clash/proxies?c=NL"
     interval: 3600
-    path: ./provider-nl.yaml
+    path: ./providers/provider-nl.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   others:
     type: http
-    url: "http://{{ .domain }}/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU"
+    url: "http://127.0.0.1:8080/clash/proxies?nc=CN,HK,TW,US,CA,JP,SG,AU,CH,DE,GB,NL,FR,RU"
     interval: 3600
-    path: ./provider-others.yaml
+    path: ./providers/provider-others.yaml
     health-check:
       enable: true
       interval: 600
       url: http://www.gstatic.com/generate_204
   all:
     type: http
-    url: "http://{{ .domain }}/clash/proxies"
+    url: "http://127.0.0.1:8080/clash/proxies"
     interval: 3600
     path: ./provider.yaml
     health-check:

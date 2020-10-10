@@ -63,9 +63,7 @@ func setupRouter() {
 	})
 	// 本地config路径
 	router.GET("/clash/localconfig", func(c *gin.Context) {
-		c.HTML(http.StatusOK, "clash-config-local.yaml", gin.H{
-			"domain": config.Config.Domain,
-		})
+		c.HTML(http.StatusOK, "clash-config-local.yaml", gin.H{})
 	})
 
 	router.GET("/surge/config", func(c *gin.Context) {
@@ -209,17 +207,10 @@ func Run() {
 	if port == "" {
 		port = "8080"
 	}
-	// 本地运行或远程部署
-	if config.Config.Domain != "127.0.0.1:8080" {
-		err := router.Run(":" + port)
-		if err != nil {
-			log.Fatal("[router.go] Remote server starting failed")
-		}
-	} else {
-		err := router.Run()
-		if err != nil {
-			log.Fatal("[router.go] Local server starting failed")
-		}
+	// Run on this server
+	err := router.Run(":" + port)
+	if err != nil {
+		log.Fatal("[router.go] Remote server starting failed")
 	}
 
 }

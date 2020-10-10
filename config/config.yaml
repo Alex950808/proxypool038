@@ -1,8 +1,8 @@
 # your domain
-#domain: proxypoolss.herokuapp.com
-domain: 127.0.0.1:8080
+domain: proxypoolss.herokuapp.com
 
-# database url
+# database dsn(postgresql)
+# 暂不支持远程数据库，留空以启用本地数据库默认连接参数
 database_url: ""
 
 # cloudflare api

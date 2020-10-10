@@ -49,8 +49,7 @@
 ### 从源码编译
 
 需要安装Golang
-> Golang需要使用国内镜像，因原站的某些package已迁移。  
-> 由于某些众所周知的原因，需要开启科学上网代理
+> Golang需要使用国内镜像，原站的某些package已迁移。  
 
 ```sh
 $ go get -u -v github.com/Sansui233/proxypool
@@ -80,6 +79,8 @@ docker pull docker.pkg.github.com/Sansui233/proxypool/proxypool:latest
 
 ## 使用
 
+运行该程序需要具有访问完整互联网的能力。
+
 ### 修改配置文件
 
 首先修改 config.yaml 中的必要配置信息，cf开头的选项不需要填写
@@ -93,6 +94,12 @@ source.yaml 文件中定义了抓取源，需要定期手动维护更新
 ```shell
 proxypool -c ./config/config.yaml
 ```
+
+## Clash配置文件
+
+远程部署时配置文件Clash配置文件访问：https://domain/clash/config
+
+本地部署时配置文件Clash配置文件访问：http://127.0.0.1:8080/clash/localconfig
 
 ## 截图
 

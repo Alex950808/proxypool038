@@ -34,6 +34,7 @@ func NewGetter(sourceType string, options tool.Options) (getter Getter, err erro
 	return nil, ErrorCreaterNotSupported
 }
 
+// 解析链接为相应Proxy对象
 func String2Proxy(link string) proxy.Proxy {
 	var err error
 	var data proxy.Proxy

@@ -63,9 +63,17 @@ cache中的key设计有：
 如果配置文件填写了database url会存储到database中。Database连接参数自行修改源码。  
 目前database数据只在抓取时使用，不用于处理Web请求。
 
+### 使用数据库
+安装postgresql，建立相应user和database。
+
 ```
 	dsn := "user=proxypool password=proxypool dbname=proxypool port=5432 sslmode=disable TimeZone=Asia/Shanghai"
 ```
+
+程序运行时建立会proxies表。
+每次运行时读出节点，爬虫完成后再存储可用的节点进去。
+
+直接暴力删除整表再全部写入，因为可用的节点注定不会多，不用担心性能问题。
 
 ## Web界面
 
@@ -74,8 +82,6 @@ cache中的key设计有：
 ```
 var _assetsHtmlSurgeHtml="[]byte("\x1f\x8b\x...")"
 ```
-
-
 
 以上字节解压后是一个go的HTML模板。解压时，由gzip的reader写入byte.Buffer，再转换为Bytes写入相应文件。
 
