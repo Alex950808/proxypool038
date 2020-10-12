@@ -1,6 +1,6 @@
 # your domain
-#domain: proxypoolss.herokuapp.com
-domain: 127.0.0.1
+domain: proxypoolss.herokuapp.com
+#domain: 127.0.0.1
 
 # database dsn(postgresql)
 # 暂不支持远程数据库，留空以启用本地数据库默认连接参数
