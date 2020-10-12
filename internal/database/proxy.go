@@ -45,7 +45,7 @@ func SaveProxyList(pl proxy.ProxyList) {
 	DB.Transaction(func(tx *gorm.DB) error {
 		// Delete all records in DB
 		if err := DB.Delete(&Proxy{},"id > ?",-1).Error; err != nil{
-			log.Print("[db/proxy.go] Delete failed", err)
+			log.Print("[db/proxy.go] Delete old items failed: ", err)
 			return err
 		}
 		// Store all proxies

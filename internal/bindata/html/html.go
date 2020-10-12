@@ -5,6 +5,19 @@
 // assets/html/index.html
 // assets/html/surge.conf
 // assets/html/surge.html
+
+// Example: loadtemplate in [router.go]
+
+// 使用难以被更改的bindata生成assets，目前已不再使用
+//_ = binhtml.RestoreAssets("", "assets/html") // 创建/重新创建站点文件夹下的assets
+//for _, fileName := range binhtml.AssetNames() {
+//	data := binhtml.MustAsset(fileName) // 解压被压缩后html文档数据成template
+//	t, err = t.New(fileName).Parse(string(data))
+//	if err != nil {
+//		return nil, err
+//	}
+//}
+
 package binhtml
 
 import (

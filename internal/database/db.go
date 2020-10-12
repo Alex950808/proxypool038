@@ -29,7 +29,7 @@ func connect() (err error) {
 	if err == nil {
 		log.Println("[db.go] DB connect success: ", DB.Name())
 	}else{
-		log.Println("[db.go] DB connect failed OR no DB: ", DB.Name())
+		log.Println("[db.go] DB connect failed OR no DB. Only use cache to store proxies")
 	}
 	return
 }

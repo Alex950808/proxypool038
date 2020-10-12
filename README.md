@@ -97,9 +97,9 @@ proxypool -c ./config/config.yaml
 
 ## Clash配置文件
 
-远程部署时配置文件Clash配置文件访问：https://domain/clash/config
+远程部署时Clash配置文件访问：https://domain/clash/config
 
-本地部署时配置文件Clash配置文件访问：http://127.0.0.1:8080/clash/localconfig
+本地部署时Clash配置文件访问：http://127.0.0.1:8080/clash/localconfig
 
 ## 截图
 
