@@ -29,6 +29,7 @@ func setupRouter() {
 	}
 	router.SetHTMLTemplate(temp) // 应用模板
 
+	router.Static("/css", "assets/css")
 	router.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
 			"domain":               config.Config.Domain,

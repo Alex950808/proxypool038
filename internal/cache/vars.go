@@ -11,5 +11,5 @@ var (
 
 	UsefullProxiesCount = 0
 
-	LastCrawlTime = "程序刚升级完成，正在爬取中..."
+	LastCrawlTime = "程序正在启动，请于1分钟后刷新页面"
 )
