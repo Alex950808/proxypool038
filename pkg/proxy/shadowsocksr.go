@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Sansui233/proxypool/pkg/tool"
+	"github.com/Alex950808/proxypool038/pkg/tool"
 )
 
 var (
@@ -71,7 +71,7 @@ func (ssr ShadowsocksR) Link() (link string) {
 	query.Add("obfsparam", tool.Base64EncodeString(ssr.ObfsParam, true))
 	query.Add("protoparam", tool.Base64EncodeString(ssr.ProtocolParam, true))
 	query.Add("remarks", tool.Base64EncodeString(ssr.Name, true))
-	query.Add("group", tool.Base64EncodeString("proxypoolss.herokuapp.com", true))
+	query.Add("group", tool.Base64EncodeString("alexproxy002.herokuapp.com", true))
 	payload = tool.Base64EncodeString(fmt.Sprintf("%s/?%s", payload, query.Encode()), true)
 	return fmt.Sprintf("ssr://%s", payload)
 }

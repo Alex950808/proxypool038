@@ -8,9 +8,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/Sansui233/proxypool/config"
-	"github.com/Sansui233/proxypool/internal/cache"
-	"github.com/Sansui233/proxypool/pkg/provider"
+	"github.com/Alex950808/proxypool038/config"
+	"github.com/Alex950808/proxypool038/internal/cache"
+	"github.com/Alex950808/proxypool038/pkg/provider"
 	"github.com/gin-gonic/gin"
 	_ "github.com/heroku/x/hmetrics/onload"
 )

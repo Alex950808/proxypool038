@@ -2,8 +2,8 @@ package database
 
 import (
 	"fmt"
-	"github.com/Sansui233/proxypool/pkg/getter"
-	"github.com/Sansui233/proxypool/pkg/proxy"
+	"github.com/Alex950808/proxypool038/pkg/getter"
+	"github.com/Alex950808/proxypool038/pkg/proxy"
 	"gorm.io/gorm"
 	"log"
 	"time"
