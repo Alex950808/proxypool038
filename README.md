@@ -5,13 +5,13 @@
 <h5 align="center">自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息，聚合去重测试可用性后提供节点列表</h5>
 
 <p align="center">
-  <a href="https://github.com/Sansui233/proxypool/actions">
+  <a href="https://github.com/Alex950808/proxypool038/actions">
     <img src="https://img.shields.io/github/workflow/status/Sansui233/proxypool/Go?style=flat-square" alt="Github Actions">
   </a>
-  <a href="https://goreportcard.com/report/github.com/Sansui233/proxypool">
-    <img src="https://goreportcard.com/badge/github.com/Sansui233/proxypool?style=flat-square">
+  <a href="https://goreportcard.com/report/github.com/Alex950808/proxypool038">
+    <img src="https://goreportcard.com/badge/github.com/Alex950808/proxypool038?style=flat-square">
   </a>
-  <a href="https://github.com/Sansui233/proxypool/releases">
+  <a href="https://github.com/Alex950808/proxypool038/releases">
     <img src="https://img.shields.io/github/release/Sansui233/proxypool/all.svg?style=flat-square">
   </a>
 </p>
@@ -52,7 +52,7 @@
 > Golang需要使用国内镜像，原站的某些package已迁移。  
 
 ```sh
-$ go get -u -v github.com/Sansui233/proxypool
+$ go get -u -v github.com/Alex950808/proxypool038
 ```
 
 运行
@@ -67,14 +67,14 @@ make
 
 ### 下载预编译程序
 
-从这里下载预编译好的程序 [release](https://github.com/zu1k/proxypool/releases)
+从这里下载预编译好的程序 [release](github.com/Alex950808/proxypool038/releases)
 
 > 原作者已停更，需要请自行编译
 
 ### 使用docker
 
 ```sh
-docker pull docker.pkg.github.com/Sansui233/proxypool/proxypool:latest
+docker pull docker.pkg.github.com/Alex950808/proxypool038/proxypool:latest
 ```
 
 ## 使用

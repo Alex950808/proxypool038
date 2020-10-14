@@ -1,5 +1,5 @@
 # your domain
-domain: example.com
+domain: alexproxy002.herokuapp.com
 #domain: 127.0.0.1
 
 # database dsn(postgresql)
@@ -15,4 +15,4 @@ source-files:
   # use local file
   - ./config/source.yaml
   # use web file
-#  - https://example.com/config/source.yaml
+  #- https://example.com/config/source.yaml
