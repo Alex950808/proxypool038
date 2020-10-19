@@ -1,19 +1,21 @@
 # tg频道抓取
 - type: tgchannel
   options:
-    channel: ssrList
+    channel: freeshadowsock
     num: 200
 - type: tgchannel
   options:
-    channel: SSRSUB
+    channel: jiedianfenxiang
     num: 200
 - type: tgchannel
   options:
-    channel: FreeSSRNode
+    channel: fanqiang666
     num: 200
 - type: tgchannel
   options:
-    channel: V2List
+    channel: ssrtool_crack
     num: 200
-
-
+- type: tgchannel
+  options:
+    channel: ssrshares
+    num: 200
