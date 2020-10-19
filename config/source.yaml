@@ -1,9 +1,10 @@
 # tg频道抓取
 - type: tgchannel
   options:
-    channel: ssrtool_crack
+    channel: freeshadowsock
     num: 200
 - type: tgchannel
   options:
-    channel: ssrshares
+    channel: jiedianfenxiang
     num: 200
+
