@@ -35,23 +35,4 @@
   options:
     channel: ssrshares
     num: 200
-- type: tgchannel
-  options:
-    channel: gongyijichangfenxiang
-    num: 200
-- type: tgchannel
-  options:
-    channel: fanqiang666
-    num: 200
-- type: tgchannel
-  options:
-    channel: ssrv2taytgshare
-    num: 200
-- type: tgchannel
-  options:
-    channel: freeshadowsock
-    num: 200
-- type: tgchannel
-  options:
-    channel: sphard
-    num: 200
+
