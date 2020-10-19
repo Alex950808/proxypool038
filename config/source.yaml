@@ -76,10 +76,6 @@
   options:
     channel: youmtp
     num: 200
-- type: tgchannel
-  options:
-    channel: sphard
-    num: 200
 
 # 翻墙党论坛抓取
 - type: web-fanqiangdang
