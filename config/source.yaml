@@ -57,9 +57,5 @@
     num: 200
 - type: tgchannel
   options:
-    channel: TgProxies
-    num: 200
-- type: tgchannel
-  options:
     channel: sphard
     num: 200
