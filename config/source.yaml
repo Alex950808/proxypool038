@@ -3,8 +3,5 @@
   options:
     channel: freeshadowsock
     num: 200
-- type: tgchannel
-  options:
-    channel: jiedianfenxiang
-    num: 200
+
 
