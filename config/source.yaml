@@ -45,10 +45,6 @@
     num: 200
 - type: tgchannel
   options:
-    channel: ssrtool_crack
-    num: 200
-- type: tgchannel
-  options:
     channel: ssrv2taytgshare
     num: 200
 - type: tgchannel
