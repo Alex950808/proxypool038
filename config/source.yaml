@@ -15,24 +15,5 @@
   options:
     channel: V2List
     num: 200
-- type: tgchannel
-  options:
-    channel: freeshadowsock
-    num: 200
-- type: tgchannel
-  options:
-    channel: jiedianfenxiang
-    num: 200
-- type: tgchannel
-  options:
-    channel: fanqiang666
-    num: 200
-- type: tgchannel
-  options:
-    channel: ssrtool_crack
-    num: 200
-- type: tgchannel
-  options:
-    channel: ssrshares
-    num: 200
+
 
