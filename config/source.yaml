@@ -154,10 +154,6 @@
     num: 200
 - type: tgchannel
   options:
-    channel: jiedianfenxiang
-    num: 200
-- type: tgchannel
-  options:
     channel: fanqiang666
     num: 200
 - type: tgchannel
