@@ -1,8 +1,4 @@
 # 模糊抓取订阅链接
-    
-- type: webfuzzsub
-  options:
-    url: https://uploader.shimo.im/f/KO9YB4sh4a9OSwXw.txt?attname=1.txt
 - type: webfuzzsub
   options:
     url: https://t.me/s/ssrv2taytgshare?before=743
