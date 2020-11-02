@@ -1,10 +1,16 @@
 # 模糊抓取订阅链接
 - type: webfuzzsub
   options:
-    url: https://github.com/freefq/free
+    url: https://raw.githubusercontent.com/du5/free/master/sub.list
 - type: webfuzzsub
   options:
-    url: https://github.com/oouxx/fqsub/blob/7f35b272888341f207acc10c92f1eb0be431e0e3/sub.list
+    url: https://uploader.shimo.im/f/KO9YB4sh4a9OSwXw.txt?attname=1.txt
 - type: webfuzzsub
   options:
-    url: https://github.com/woytu/notes-vuepress/blob/757206d5c10d112d56a3c789d5a622d4bcfe6375/System/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.md
+    url: https://t.me/s/ssrv2taytgshare?before=743
+- type: webfuzzsub
+  options:
+    url: http://d.zaix.ru/ntiL.txt
+- type: webfuzzsub
+  options:
+    url: https://github.com/umelabs/node.umelabs.dev
