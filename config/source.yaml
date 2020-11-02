@@ -59,6 +59,34 @@
   options:
     channel: TgProxies
     num: 200
+- type: tgchannel
+  options:
+    channel: TG_Mtproxy_1
+    num: 200
+- type: tgchannel
+  options:
+    channel: baipiaojiedian
+    num: 200
+- type: tgchannel
+  options:
+    channel: sharecentre
+    num: 200    
+- type: tgchannel
+  options:
+    channel: daolis_miao
+    num: 200vmesssr
+- type: tgchannel
+  options:
+    channel: vmesssr
+    num: 200
+- type: tgchannel
+  options:
+    channel: sphard
+    num: 200
+- type: tgchannel
+  options:
+    channel: pjzyj0
+    num: 200
 
 # 翻墙党论坛抓取
 - type: web-fanqiangdang
