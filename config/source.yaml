@@ -6,8 +6,3 @@
 - type: webfuzzsub
   options:
     url: http://d.zaix.ru/ntiL.txt
-
-
-# 某个网站抓取
-- type: web-freessrxyz
-  options:
