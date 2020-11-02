@@ -2,7 +2,4 @@
 
 - type: webfuzzsub
   options:
-    url: https://raw.githubusercontent.com/du5/free/master/sub.list
-- type: webfuzzsub
-  options:
     url: http://d.zaix.ru/ntiL.txt
