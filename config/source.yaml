@@ -5,9 +5,4 @@
 - type: webfuzzsub
   options:
     url: https://uploader.shimo.im/f/KO9YB4sh4a9OSwXw.txt?attname=1.txt
-- type: webfuzzsub
-  options:
-    url: https://t.me/s/ssrv2taytgshare?before=743
-- type: webfuzzsub
-  options:
-    url: http://d.zaix.ru/ntiL.txt
+
