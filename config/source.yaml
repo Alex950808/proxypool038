@@ -4,9 +4,6 @@
     url: https://raw.githubusercontent.com/du5/free/master/sub.list
 - type: webfuzzsub
   options:
-    url: https://t.me/s/ssrv2taytgshare?before=743
-- type: webfuzzsub
-  options:
     url: http://d.zaix.ru/ntiL.txt
 - type: webfuzzsub
   options:
