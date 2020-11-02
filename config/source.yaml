@@ -3,3 +3,6 @@
 - type: webfuzzsub
   options:
     url: https://raw.githubusercontent.com/du5/free/master/sub.list
+# 某个网站抓取
+- type: web-freessrxyz
+  options:
