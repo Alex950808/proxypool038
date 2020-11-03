@@ -70,6 +70,24 @@
 - type: subscribe
   options:
     url: https://rss-node.com/link/FYw5RxXkHrRZdUAb?mu=1
+- type: subscribe
+  options:
+    url: https://raw.githubusercontent.com/JACKUSR2089/v2ray-subscribed/master/2020-11-1
+- type: subscribe
+  options:
+    url: https://www.recear.xyz/link/XZHfqw7m7nyO17hT?sub=3
+- type: subscribe
+  options:
+    url: https://subhaha.xyz/link/A8OkgyOpxGeJOdFQ?sub=3&extend=1
+- type: subscribe
+  options:
+    url: https://www.recear.xyz/link/XZHfqw7m7nyO17hT?sub=1
+- type: subscribe
+  options:
+    url: https://subhaha.xyz/link/A8OkgyOpxGeJOdFQ?sub=1&extend=1
+- type: subscribe
+  options:
+    url: https://www.recear.xyz/link/XZHfqw7m7nyO17hT?sub=2
 
 # 网页模糊抓取
 - type: webfuzz
