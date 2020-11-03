@@ -35,6 +35,9 @@
 - type: webfuzzsub
   options:
     url: https://github.com/pojiezhiyuanjun/freev2
+- type: webfuzzsub
+  options:
+    url: https://lisondawang.tk/jiedianfenxiang.html
 
 # 订阅链接
 - type: subscribe
