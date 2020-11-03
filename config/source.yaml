@@ -23,6 +23,18 @@
 - type: webfuzzsub
   options:
     url: https://github.com/woytu/notes-vuepress/blob/757206d5c10d112d56a3c789d5a622d4bcfe6375/System/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F.md
+- type: webfuzzsub
+  options:
+    url: https://raw.githubusercontent.com/oouxx/fqsub/master/sub.list
+- type: webfuzzsub
+  options:
+    url: https://github.com/doudoubinga/ceshi/blob/master/trash/base64-sub
+- type: webfuzzsub
+  options:
+    url: https://github.com/JACKUSR2089/v2ray-subscribed   
+- type: webfuzzsub
+  options:
+    url: https://github.com/pojiezhiyuanjun/freev2
 
 # 订阅链接
 - type: subscribe
@@ -126,6 +138,12 @@
 - type: webfuzz
   options:
     url: https://raw.githubusercontent.com/52bp/52bp.github.io/master/freesite.html
+- type: webfuzz
+  options:
+    url: https://telegra.ph/2020-10-3-10-02
+- type: webfuzz
+  options:
+    url: https://lisondawang.tk/jiedianfenxiang.html
 
 # tg频道抓取
 - type: tgchannel
@@ -170,19 +188,7 @@
     num: 200
 - type: tgchannel
   options:
-    channel: fanqiang666
-    num: 200
-- type: tgchannel
-  options:
-    channel: ssrtool_crack
-    num: 200
-- type: tgchannel
-  options:
     channel: ssrv2taytgshare
-    num: 200
-- type: tgchannel
-  options:
-    channel: freeshadowsock
     num: 200
 - type: tgchannel
   options:
@@ -223,6 +229,74 @@
 - type: tgchannel
   options:
     channel: flyingboat
+    num: 200
+- type: tgchannel
+  options:
+    channel: NetfreexSrV
+    num: 200
+- type: tgchannel
+  options:
+    channel: gyjclub
+    num: 200
+- type: tgchannel
+  options:
+    channel: VPNFolder
+    num: 200
+- type: tgchannel
+  options:
+    channel: youmtp
+    num: 200
+- type: tgchannel
+  options:
+    channel: ssrkn
+    num: 200
+- type: tgchannel
+  options:
+    channel: abchz
+    num: 200
+- type: tgchannel
+  options:
+    channel: yg251153
+    num: 200
+- type: tgchannel
+  options:
+    channel: woyaofq
+    num: 200
+- type: tgchannel
+  options:
+    channel: wwx_com
+    num: 200
+- type: tgchannel
+  options:
+    channel: freessr4k
+    num: 200
+- type: tgchannel
+  options:
+    channel: ultrafreevpn
+    num: 200
+- type: tgchannel
+  options:
+    channel: VSshit
+    num: 200
+- type: tgchannel
+  options:
+    channel: InternetSSR
+    num: 200
+- type: tgchannel
+  options:
+    channel: baipiaodadui
+    num: 200
+- type: tgchannel
+  options:
+    channel: mtproxy666
+    num: 200
+- type: tgchannel
+  options:
+    channel: v2ray666
+    num: 200
+- type: tgchannel
+  options:
+    channel: freeVPNserv
     num: 200
 
 # 翻墙党论坛抓取
