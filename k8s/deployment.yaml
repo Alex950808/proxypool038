@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proxypool-okteto
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: proxypool-okteto
+  template:
+    metadata:
+      labels:
+        app: proxypool-okteto
+    spec:
+      containers:
+      - name: proxypool-okteto
+        image: alex0808/proxypool:latest
+        env:
+        - name: CONFIG_FILE
+          value: "https://raw.githubusercontent.com/Alex950808/proxypoolnew/master/config/config.yaml"
+        - name: DOMAIN
+          value: "proxypool-okteto-alex950808.cloud.okteto.net"
+        ports:
+        - containerPort: 8080

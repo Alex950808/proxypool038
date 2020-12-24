@@ -1,0 +1,3 @@
+deploy:
+  - okteto build -t okteto.dev/proxypoolnew:latest
+  - kubectl apply -f k8s

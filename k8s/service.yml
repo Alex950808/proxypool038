@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: proxypool-okteto
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP
+  ports:
+    - name: proxypool-okteto
+      port: 8080
+  selector:
+    app: proxypool-okteto
