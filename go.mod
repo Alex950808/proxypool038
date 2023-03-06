@@ -9,8 +9,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.5.1 // indirect
 	github.com/andybalholm/cascadia v1.2.0 // indirect
 	github.com/antchfx/htmlquery v1.2.3 // indirect
-	github.com/antchfx/xmlquery v1.2.4 // indirect
-	github.com/antchfx/xpath v1.1.8 // indirect
+	github.com/antchfx/xmlquery v1.3.1 // indirect
 	github.com/cloudflare/cloudflare-go v0.13.2
 	github.com/ghodss/yaml v1.0.0
 	github.com/gin-gonic/gin v1.6.3
